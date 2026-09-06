@@ -1,0 +1,29 @@
+/*start nya di modifikasi profile.html*/
+.tabel-biodata {
+    width: 96%;
+    margin: 0 auto;
+    border: 1px solid #512020;
+}
+
+.tabel-biodata td {
+    padding: 8px;
+    border: 1px solid #512020;
+}
+
+.tabel-biodata tr:nth-child(even) {
+    background-color: #FFE8E8;
+}
+
+.biodata-header {
+    background-color: #512020;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.biodata-header td {
+    padding: 8px;
+}
+
+.tabel-biodata td:first-child {
+    color: #512020;
+}
