@@ -19,7 +19,7 @@
 <body>
     <nav>
         <a href="index.html">Home</a>
-        <a href="profile.html">Profil Mahasiswa</a>
+        <a href="profile.html" class="active">Profil Mahasiswa</a>
         <a href="schedule.html">Jadwal Kuliah</a>
         <a href="gallery.html">Galeri Foto</a>
         <a href="register.html">Daftar Asisten</a>
@@ -27,7 +27,7 @@
     </nav>
 
     <!-- HEADER -->
-    <table>
+    <table class="profil-header">
         <tr>
             <td align="center">
                 <b>PROFIL MAHASISWA</b>
@@ -39,7 +39,7 @@
 
     <!-- BIODATA -->
     <table class="tabel-biodata">
-        <tr>
+        <tr class="biodata-header">
             <td colspan="3">
                 <b>DATA DIRI</b>
             </td>
@@ -118,8 +118,8 @@
     <br>
 
     <!-- istilah IS yang telah dipelajari -->
-    <table>
-        <tr>
+    <table class="tabel-istilah">
+        <tr class="istilah-header">
             <td>
                 <b>IS TERM STUDIED</b>
             </td>
@@ -171,13 +171,13 @@
     <br>
 
     <!-- NESTED LIST menggunakan ul dan ol -->
-    <table width="96%" border="1" bordercolor="#512020" cellpadding="10" cellspacing="0" align="center">
-        <tr bgcolor="#512020">
+    <table class="tabel-matkul">
+        <tr class="matkul-header">
             <td>
-                <font color="#FFFFFF" size="3"><b>MATA KULIAH SEMESTER 3</b></font>
+                <b>MATA KULIAH SEMESTER 3</b>
             </td>
         </tr>
-        <tr bgcolor="#FFF0F0">
+        <tr>
             <td>
                 <ol type="I">
                     <li><b>Mata Kuliah Wajib</b>
@@ -216,103 +216,81 @@ Ringkasan:
 
     <br>
 
-    <a name="achievements"></a>
-
-    <hr width="96%" size="3" align="center" noshade>
-
     <!-- TABEL PRESTASI  -->
-    <table width="96%" border="1" bordercolor="#512020" cellpadding="8" cellspacing="0" align="center">
+    <table class="tabel-prestasi">
 
         <!-- Heading utama -->
-        <tr bgcolor="#512020">
-            <td colspan="4" align="center">
-                <font color="#FFFFFF" size="4"><b>PENGALAMAN &amp; PRESTASI</b></font>
+        <tr class="prestasi-header">
+            <td colspan="4">
+                <b>PENGALAMAN & PRESTASI</b>
             </td>
         </tr>
 
         <!-- Sub-heading kolom -->
-        <tr bgcolor="#7A3030">
-            <td colspan="2" align="center">
-                <font color="#FFFFFF"><b>Kegiatan / Prestasi</b></font>
+        <tr class="prestasi-subheader">
+            <td colspan="2">
+                <b>Kegiatan / Prestasi</b>
             </td>
-            <td align="center" width="18%">
-                <font color="#FFFFFF"><b>Peran</b></font>
+            <td>
+                <b>Peran</b>
             </td>
-            <td align="center" width="15%">
-                <font color="#FFFFFF"><b>Tahun</b></font>
+            <td>
+                <b>Tahun</b>
             </td>
         </tr>
 
         <!-- 5 Baris data -->
 
         <!-- Baris 1 -->
-        <tr bgcolor="#FFE8E8">
-            <td align="center" width="6%">1</td>
+        <tr>
+            <td>1</td>
             <td>Juara 3 Lomba BPC Future Young Preneurship</td>
-            <td align="center">Peserta</td>
-            <td align="center">2025</td>
+            <td>Peserta</td>
+            <td>2025</td>
         </tr>
 
         <!-- Baris 2 -->
-        <tr bgcolor="#FFFFFF">
-            <td align="center">2</td>
+        <tr>
+            <td>2</td>
             <td>Best Staff of July Bidang Ekonomi Kreatif BEM UPNVJ</td>
-            <td align="center">Anggota Aktif</td>
-            <td align="center">2026</td>
+            <td>Anggota Aktif</td>
+            <td>2026</td>
         </tr>
 
         <!-- Baris 3 -->
-        <tr bgcolor="#FFE8E8">
-            <td align="center">3</td>
+        <tr>
+            <td>3</td>
             <td>Staff of Fundrasing Kepanitiaan Class of Entrepreneurship</td>
-            <td align="center">Panitia Aktif</td>
-            <td align="center">2026</td>
+            <td>Panitia Aktif</td>
+            <td>2026</td>
         </tr>
 
         <!-- Baris 4 -->
-        <tr bgcolor="#FFFFFF">
-            <td align="center">4</td>
+        <tr>
+            <td>4</td>
             <td>Veteran Business Day BPC Semi-finalist</td>
-            <td align="center">Peserta</td>
-            <td align="center">2026</td>
+            <td>Peserta</td>
+            <td>2026</td>
         </tr>
 
         <!-- Baris 5 -->
-        <tr bgcolor="#FFE8E8">
-            <td align="center">5</td>
+        <tr>
+            <td>5</td>
             <td>Master Ceremony at VCONNECT by Veterantech</td>
-            <td align="center">Panitia</td>
-            <td align="center">2026</td>
+            <td>Panitia</td>
+            <td>2026</td>
         </tr>
 
         <!-- Total Kegiatan -->
-        <tr bgcolor="#512020">
-            <td colspan="2" align="center">
-                <font color="#FFFFFF">
-                    <b>Total Kegiatan</b>
-                </font>
+        <tr class="prestasi-total">
+            <td colspan="2">
+                <b>Total Kegiatan</b>
             </td>
-            <td colspan="2" align="center">
-                <font color="#FFFFFF">
-                    <b>5</b>
-                </font>
+            <td colspan="2">
+                <b>5</b>
             </td>
         </tr>
 
-    </table>
-
-    <br>
-
-    <!--balik ke atas-->
-    <table width="96%" border="0" cellpadding="6" cellspacing="0" align="center">
-        <tr>
-            <td align="center">
-                <a href="#top">
-                    <font size="2">&#8679; Kembali ke Atas</font>
-                </a>
-                </font>
-            </td>
-        </tr>
     </table>
 
     <br>

@@ -1,4 +1,47 @@
-/*start nya di modifikasi profile.html*/
+/*navigasi*/
+nav {
+    background-color: #512020;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 8px 12px;
+    margin: 0 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:link {
+    color: #FFFFFF;
+}
+
+nav a:visited {
+    color: #FFFFFF;
+}
+
+nav a:hover {
+    background-color: #7A3030;
+}
+
+nav a:active {
+    background-color: #020215;
+}
+
+nav a.active {
+    background-color: #020215;
+}
+
+.profil-header {
+    background-color: #512020;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+/*tabel biodata*/
 .tabel-biodata {
     width: 96%;
     margin: 0 auto;
@@ -11,7 +54,7 @@
 }
 
 .tabel-biodata tr:nth-child(even) {
-    background-color: #FFE8E8;
+    background-color: #F5E0E0;
 }
 
 .biodata-header {
@@ -20,8 +63,9 @@
     text-align: center;
 }
 
-.biodata-header td {
+.tabel-biodata .biodata-header td:first-child {
     padding: 8px;
+    color: #FFFFFF;
 }
 
 .tabel-biodata td:first-child {
@@ -50,4 +94,77 @@
 
 .tabel-biodata td:nth-child(2) {
     width: 42%;
+}
+
+/*tabel istilah dan matkul*/
+.tabel-istilah {
+    width: 96%;
+    margin: 0 auto;
+    border: 1px solid #512020;
+}
+
+.tabel-istilah td {
+    padding: 10px;
+    border: 1px solid #512020;
+}
+
+.istilah-header {
+    background-color: #512020;
+    color: #FFFFFF;
+}
+
+.tabel-matkul {
+    width: 96%;
+    margin: 0 auto;
+    border: 1px solid #512020;
+}
+
+.tabel-matkul td {
+    padding: 10px;
+    border: 1px solid #512020;
+}
+
+.matkul-header {
+    background-color: #512020;
+    color: #FFFFFF;
+}
+
+/*tabel prestasi*/
+.tabel-prestasi {
+    width: 96%;
+    margin: 0 auto;
+    border: 1px solid #512020;
+}
+
+.tabel-prestasi td {
+    padding: 8px;
+    border: 1px solid #512020;
+}
+
+.prestasi-header {
+    background-color: #512020;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.prestasi-subheader {
+    background-color: #7A3030;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.tabel-prestasi tr:nth-child(2n+3) {
+    background-color: #FFE8E8;
+}
+
+.prestasi-total {
+    background-color: #512020;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.tabel-prestasi td:first-child,
+.tabel-prestasi td:nth-child(3),
+.tabel-prestasi td:nth-child(4) {
+    text-align: center;
 }
