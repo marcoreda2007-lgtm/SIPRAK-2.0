@@ -120,15 +120,16 @@ nav a.active {
     width: 96%;
     margin: 0 auto 20px;
     border: 1px solid #512020;
-    border-collapse: collapse;
     background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px #999999;
 }
 
 .tabel-biodata td {
     padding: 8px;
     border: 1px solid #512020;
     background-color: #FFFFFF;
-
+    border-radius: 10px
 }
 
 .tabel-biodata td:first-child {
