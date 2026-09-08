@@ -8,25 +8,38 @@
   N_ACHIEVEMENT  = 5
   Date typed     : 29/08/2026
 -->
+
 <!DOCTYPE html>
 <html lang="id">
 
 <head>
-    <title>Pendaftaran Asisten Laboratorium</title>
+    <meta charset="UTF-8">
+    <title>SIPRAK2.0 - Register</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <table width="100%" border="0" cellpadding="10" cellspacing="0">
-        <tr bgcolor="#512020">
-            <td align="center">
-                <font color="#FFFFFF" size="5"><b>PENDAFTARAN ASISTEN LABORATORIUM</b></font><br>
-                <font color="#FFD0D0" size="2">SIPRAK &mdash; Laboratorium Sistem Informasi UPNVJ</font>
+
+    <table class="header-siprak">
+        <tr>
+            <td>
+                <h2>SIPRAK 2.0</h2>
             </td>
         </tr>
     </table>
 
-    <br>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="profile.html">Profil Mahasiswa</a>
+        <a href="schedule.html">Jadwal Kuliah</a>
+        <a href="gallery.html">Galeri Foto</a>
+        <a href="register.html" class="active">Daftar Asisten</a>
+        <a href="journal.html">Journal</a>
+    </nav>
+
+    <div class="register-header">
+        <h1>PENDAFTARAN ASISTEN LABORATORIUM</h1>
+    </div>
 
     <form method="post"
         action="mailto:muhammadpanji@upnvj.ac.id?subject=Pendaftaran%20Asisten%20Lab%20SIPRAK%202025%2F2026&body=Formulir%20Pendaftaran%20Asisten%20Laboratorium%20SIPRAK%20dikirim%20oleh%20mahasiswa%20PBI%20Semester%203"
@@ -35,70 +48,67 @@
         <!-- Hidden: NIM mahasiswa -->
         <input type="hidden" name="nim_pendaftar" value="2510512020">
 
-        <table width="90%" border="0" cellpadding="0" cellspacing="8" align="center">
+        <table class="tabel-form">
             <tr>
                 <td>
 
                     <!-- FIELDSET 1: INFORMASI PRIBADI -->
                     <fieldset>
-                        <legend>
-                            <font color="#512020"><b>&nbsp;A. Informasi Pribadi&nbsp;</b></font>
-                        </legend>
+                        <legend>A. Informasi Pribadi</legend>
 
-                        <table width="100%">
+                        <table class="form-table">
 
-                            <!-- Nama (readonly) -->
+                            <!-- Nama -->
                             <tr>
-                                <td align="right" width="38%">
+                                <td class="label-form">
                                     <label for="f_nama">Nama Lengkap:</label>
                                 </td>
                                 <td>
                                     <input type="text" id="f_nama" name="nama" value="Ignatius Gavrilla Reda" readonly
-                                        size="34" tabindex="1">
-                                    <font size="1" color="#999">&nbsp;(tidak dapat diubah)</font>
+                                        class="input-nama" tabindex="1">
                                 </td>
                             </tr>
 
                             <!-- Password -->
                             <tr>
-                                <td align="right">
+                                <td class="label-form">
                                     <label for="f_pass">
                                         <u>P</u>assword Akun:
                                     </label>
                                 </td>
                                 <td>
-                                    <input type="password" id="f_pass" name="password" size="24" maxlength="32"
-                                        tabindex="2" accesskey="p">
+                                    <input type="password" id="f_pass" name="password" maxlength="32"
+                                        class="input-password" tabindex="2" accesskey="p">
                                 </td>
                             </tr>
 
                             <!-- Email -->
                             <tr>
-                                <td align="right">
+                                <td class="label-form">
                                     <label for="f_email">
                                         <u>E</u>mail:
                                     </label>
                                 </td>
                                 <td>
-                                    <input type="email" id="f_email" name="email" size="34" tabindex="3" accesskey="e">
+                                    <input type="email" id="f_email" name="email" class="input-email" tabindex="3"
+                                        accesskey="e">
                                 </td>
                             </tr>
 
-                            <!-- Tel dengan pattern -->
+                            <!-- Nomor HP -->
                             <tr>
-                                <td align="right">
+                                <td class="label-form">
                                     <label for="f_telp">Nomor HP:</label>
                                 </td>
                                 <td>
-                                    <input type="tel" id="f_telp" name="telp" size="20" pattern="[0-9]{10,13}"
+                                    <input type="tel" id="f_telp" name="telp" pattern="[0-9]{10,13}" class="input-telp"
                                         tabindex="4">
-                                    <font size="1" color="#999">&nbsp;10-13 digit, contoh: 08123456789</font>
                                 </td>
                             </tr>
 
-                            <!-- Date: Tanggal lahir -->
+                            <!-- Tanggal lahir -->
                             <tr>
-                                <td align="right">
+                                <td class="label-form">
                                     <label for="f_lahir">Tanggal Lahir:</label>
                                 </td>
                                 <td>
@@ -106,18 +116,18 @@
                                 </td>
                             </tr>
 
-                            <!-- 3 Radio: Jenis Kelamin -->
+                            <!-- Jenis kelamin -->
                             <tr>
-                                <td align="right" valign="top">
+                                <td class="label-form label-top">
                                     <label>Jenis Kelamin:</label>
                                 </td>
                                 <td>
                                     <input type="radio" id="jk_l" name="jk" value="Laki-laki" tabindex="6">
                                     <label for="jk_l">Laki-laki</label>
-                                    &nbsp;
+
                                     <input type="radio" id="jk_p" name="jk" value="Perempuan" tabindex="7">
                                     <label for="jk_p">Perempuan</label>
-                                    &nbsp;
+
                                     <input type="radio" id="jk_o" name="jk" value="Lainnya" tabindex="8">
                                     <label for="jk_o">Lainnya</label>
                                 </td>
@@ -126,171 +136,199 @@
                         </table>
                     </fieldset>
 
-                    <br>
-
                     <!-- FIELDSET 2: INFORMASI AKADEMIK -->
                     <fieldset>
-                        <legend>
-                            <font color="#512020"><b>&nbsp;B. Informasi Akademik&nbsp;</b></font>
-                        </legend>
+                        <legend>B. Informasi Akademik</legend>
 
-                        <table border="0" cellpadding="6" cellspacing="0" width="100%">
+                        <table class="form-table">
 
-                            <!-- Number: IPK (min, max) -->
+                            <!-- IPK -->
                             <tr>
-                                <td align="right" width="38%">
+                                <td class="label-form">
                                     <label for="f_ipk">IPK Terakhir:</label>
                                 </td>
                                 <td>
                                     <input type="number" id="f_ipk" name="ipk" min="0.00" max="4.00" step="0.01"
-                                        size="8" tabindex="9">
-                                    <font size="1" color="#999">&nbsp;(skala 0.00 &ndash; 4.00)</font>
+                                        class="input-ipk" tabindex="9">
                                 </td>
                             </tr>
 
-                            <!-- Mata kuliah yang paling kuat semester ini -->
+                            <!-- Mata kuliah terkuat -->
                             <tr>
-                                <td align="right" valign="top">
+                                <td class="label-form label-top">
                                     <label for="f_terkuat">
-                                        <u>M</u>ata kuliah yang paling<br>kuat semester ini:
+                                        <u>M</u>ata kuliah yang paling<br>
+                                        kuat semester ini:
                                     </label>
                                 </td>
                                 <td>
-                                    <!-- Select dengan optgroup -->
                                     <select id="f_terkuat" name="matkul_terkuat" tabindex="10" accesskey="m">
+
                                         <option value="">-- Pilih --</option>
+
                                         <optgroup label="Mata Kuliah Inti">
-                                            <option value="audit_si">Audit Sistem Informasi</option>
-                                            <option value="sim">Sistem Informasi Manajemen</option>
-                                            <option value="pemweb">Pemrograman Web</option>
-                                            <option value="so">Sistem Operasi</option>
+                                            <option value="audit_si">
+                                                Audit Sistem Informasi
+                                            </option>
+                                            <option value="sim">
+                                                Sistem Informasi Manajemen
+                                            </option>
+                                            <option value="pemweb">
+                                                Pemrograman Web
+                                            </option>
+                                            <option value="so">
+                                                Sistem Operasi
+                                            </option>
                                         </optgroup>
+
                                         <optgroup label="Peminatan &amp; Umum">
-                                            <option value="uiux">UI/UX Design (Peminatan Ad.1)</option>
-                                            <option value="transdig">Transformasi Digital</option>
-                                            <option value="etika">Etika Profesi Teknologi Informasi</option>
-                                            <option value="jarkom">Jaringan Komputer</option>
+                                            <option value="uiux">
+                                                UI/UX Design (Peminatan Ad.1)
+                                            </option>
+                                            <option value="transdig">
+                                                Transformasi Digital
+                                            </option>
+                                            <option value="etika">
+                                                Etika Profesi Teknologi Informasi
+                                            </option>
+                                            <option value="jarkom">
+                                                Jaringan Komputer
+                                            </option>
                                         </optgroup>
+
                                         <optgroup label="Praktikum">
-                                            <option value="lab_pemweb">Praktikum Pemrograman Web</option>
-                                            <option value="lab_so">Praktikum Sistem Operasi</option>
+                                            <option value="lab_pemweb">
+                                                Praktikum Pemrograman Web
+                                            </option>
+                                            <option value="lab_so">
+                                                Praktikum Sistem Operasi
+                                            </option>
                                         </optgroup>
+
                                     </select>
                                 </td>
                             </tr>
 
-                            <!-- Multiple select dengan size -->
+                            <!-- Hari tersedia -->
                             <tr>
-                                <td align="right" valign="top">
-                                    <label for="f_hari">Hari tersedia<br>(pilih lebih dari satu):</label>
+                                <td class="label-form label-top">
+                                    <label for="f_hari">
+                                        Hari tersedia<br>
+                                        (pilih lebih dari satu):
+                                    </label>
                                 </td>
                                 <td>
-                                    <select id="f_hari" name="hari_tersedia" multiple size="5" tabindex="11">
+                                    <select id="f_hari" name="hari_tersedia" multiple class="select-hari" tabindex="11">
+
                                         <option value="senin">Senin</option>
                                         <option value="selasa">Selasa</option>
                                         <option value="rabu">Rabu</option>
                                         <option value="kamis">Kamis</option>
                                         <option value="jumat">Jumat</option>
+
                                     </select>
+
                                     <br>
-                                    <font size="1" color="#999">Tahan Ctrl untuk pilih lebih dari satu</font>
                                 </td>
                             </tr>
 
-                            <!-- 4 Checkbox: Keahlian -->
+                            <!-- Keahlian -->
                             <tr>
-                                <td align="right" valign="top">
+                                <td class="label-form label-top">
                                     <label>Keahlian yang dimiliki:</label>
                                 </td>
                                 <td>
+
                                     <input type="checkbox" id="sk1" name="keahlian" value="HTML" tabindex="12">
-                                    <label for="sk1">HTML &amp; Dasar Web</label><br>
+                                    <label for="sk1">HTML &amp; Dasar Web</label>
+
+                                    <br>
+
                                     <input type="checkbox" id="sk2" name="keahlian" value="Database" tabindex="13">
-                                    <label for="sk2">Basis Data &amp; SQL</label><br>
+                                    <label for="sk2">Basis Data &amp; SQL</label>
+
+                                    <br>
+
                                     <input type="checkbox" id="sk3" name="keahlian" value="Jaringan" tabindex="14">
-                                    <label for="sk3">Jaringan Komputer</label><br>
+                                    <label for="sk3">Jaringan Komputer</label>
+
+                                    <br>
+
                                     <input type="checkbox" id="sk4" name="keahlian" value="UI_UX" tabindex="15">
                                     <label for="sk4">Desain UI/UX</label>
+
                                 </td>
                             </tr>
 
                         </table>
                     </fieldset>
 
-                    <br>
-
                     <!-- FIELDSET 3: MOTIVASI & BERKAS -->
                     <fieldset>
-                        <legend>
-                            <font color="#512020"><b>&nbsp;C. Motivasi &amp; Berkas Pendukung&nbsp;</b></font>
-                        </legend>
+                        <legend>C. Motivasi &amp; Berkas Pendukung</legend>
 
-                        <table border="0" cellpadding="6" cellspacing="0" width="100%">
+                        <table class="form-table">
 
-                            <!-- Textarea: Motivasi  -->
+                            <!-- Motivasi -->
                             <tr>
-                                <td align="right" valign="top" width="38%">
+                                <td class="label-form label-top">
                                     <label for="f_motivasi">
                                         <u>A</u>lasan &amp; Motivasi Mendaftar:
                                     </label>
                                 </td>
                                 <td>
-                                    <textarea id="f_motivasi" name="motivasi" rows="5" cols="44" tabindex="16"
+                                    <textarea id="f_motivasi" name="motivasi" rows="5" tabindex="16"
                                         accesskey="a">Tuliskan motivasi Anda di sini...</textarea>
                                 </td>
                             </tr>
 
-                            <!-- Textarea: Pengalaman -->
+                            <!-- Pengalaman -->
                             <tr>
-                                <td align="right" valign="top">
-                                    <label for="f_pengalaman">Pengalaman Relevan:</label>
+                                <td class="label-form label-top">
+                                    <label for="f_pengalaman">
+                                        Pengalaman Relevan:
+                                    </label>
                                 </td>
                                 <td>
-                                    <textarea id="f_pengalaman" name="pengalaman" rows="4" cols="44"
+                                    <textarea id="f_pengalaman" name="pengalaman" rows="4"
                                         tabindex="17">Tuliskan pengalaman Anda jika ada...</textarea>
                                 </td>
                             </tr>
 
-                            <!-- File: Foto -->
+                            <!-- Foto -->
                             <tr>
-                                <td align="right">
-                                    <label for="f_foto">Pas Foto (3 x 4):</label>
+                                <td class="label-form">
+                                    <label for="f_foto">
+                                        Pas Foto (3 x 4):
+                                    </label>
                                 </td>
                                 <td>
                                     <input type="file" id="f_foto" name="foto" accept="image/jpeg,image/png"
                                         tabindex="18">
-                                    <br>
-                                    <font size="1" color="#999">Format JPG atau PNG, maks. 2MB</font>
-                                </td>
-                            </tr>
 
-                            <tr>
-                                <td colspan="2" height="8"></td>
+                                    <br>
+                                </td>
                             </tr>
 
                             <!-- Pernyataan -->
                             <tr>
-                                <td colspan="2" align="center">
+                                <td colspan="2" class="pernyataan">
                                     <input type="checkbox" id="f_setuju" name="pernyataan" value="setuju" tabindex="19">
+
                                     <label for="f_setuju">
-                                        <font size="2">
-                                            Saya menyatakan bahwa seluruh data yang diisi adalah
-                                            benar dan dapat dipertanggungjawabkan.
-                                        </font>
+                                        Saya menyatakan bahwa seluruh data yang
+                                        diisi adalah benar dan dapat
+                                        dipertanggungjawabkan.
                                     </label>
                                 </td>
                             </tr>
 
+                            <!-- Tombol -->
                             <tr>
-                                <td colspan="2" height="10"></td>
-                            </tr>
+                                <td colspan="2" class="form-button">
+                                    <input type="submit" value="KIRIM PENDAFTARAN" tabindex="20">
 
-                            <!-- Submit dan Reset -->
-                            <tr>
-                                <td colspan="2" align="center">
-                                    <input type="submit" value="  KIRIM PENDAFTARAN  " tabindex="20">
-                                    &nbsp;&nbsp;&nbsp;
-                                    <input type="reset" value="  RESET FORMULIR  " tabindex="21">
+                                    <input type="reset" value="RESET FORMULIR" tabindex="21">
                                 </td>
                             </tr>
 
@@ -302,8 +340,6 @@
         </table>
 
     </form>
-
-    <br>
 
 </body>
 

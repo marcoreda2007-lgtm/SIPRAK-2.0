@@ -1,45 +1,129 @@
 <!--
-  Name           : Ignatius Gavrilla Reda
-  Student number : 2510512020
-  Class          : PBI
-  File           : index.html
-  MAIN_COLOUR    = #512020  (d5-d10 dari NIM: 5,1,2,0,2,0)
-  ACCENT_COLOUR  = #020215
-  N_EXPLORATION  = 7
-  Date typed     : 06/09/2026
+Name           : Ignatius Gavrilla Reda
+Student number : 2510512020
+Class          : PBI
+File           : index.html
+MAIN_COLOUR    : #512020
+ACCENT_COLOUR  : #020215
+N_EXPLORATION  : 7
+Date typed     : 08/09/2026
 -->
+
 <!DOCTYPE html>
 <html lang="id">
 
 <head>
-    <title>SIPRAK &mdash; Ignatius Gavrilla Reda (2510512020)</title>
+    <title>SIPRAK 2.0 - Home</title>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header>
-        <h1>SIPRAK 2.0</h2>
-            <p>Student Academic Information System</p>
-    </header>
-
+    <table class="header-siprak">
+        <tr>
+            <td>
+                <h2>
+                    SIPRAK 2.0
+                </h2>
+            </td>
+        </tr>
+    </table>
+    <!-- NAVIGASI -->
     <nav>
-        <a href="index.html">Home</a>
-        <a href="profile.html">Profile</a>
-        <a href="schedule.html">Schedule</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="register.html">Register</a>
+        <a href="index.html" class="active">Home</a>
+        <a href="profile.html">Profil Mahasiswa</a>
+        <a href="schedule.html">Jadwal Kuliah</a>
+        <a href="gallery.html">Galeri Foto</a>
+        <a href="register.html">Daftar Asisten</a>
         <a href="journal.html">Journal</a>
     </nav>
 
-    <main>
-        <hr>
-        <h2>Selamat Datang di SIPRAK 2.0</h2>
+    <!-- SELAMAT DATANG -->
+    <div class="home-div">
+        <h2 id="selamat-datang">Selamat Datang</h2>
 
         <p>
-            Website ini mengandung informasi mengenai saya,
-            jadwal studi saya, galeri, dan form registrasi.
+            Selamat datang di website SIPRAK 2.0
+            <b>Ignatius Gavrilla Reda</b>, mahasiswa S1 Sistem Informasi
+            kelas PBI semester 3.
         </p>
-    </main>
+
+        <p>
+            Website ini berisi informasi profil mahasiswa, jadwal kuliah,
+            galeri foto, pendaftaran asisten, dan jurnal eksplorasi CSS.
+        </p>
+    </div>
+
+    <!-- PERUBAHAN DARI TUGAS 2 -->
+    <div class="home-div">
+        <h3>Yang Berubah dari Tugas 2</h3>
+
+        <p>
+            Pada Tugas 3, tampilan website SIPRAK mulai menggunakan CSS
+            eksternal melalui satu file <b>css/style.css</b>.
+        </p>
+
+        <p>
+            Tag <b>frameset</b> tidak lagi digunakan. Navigasi sekarang
+            menjadi bagian dari setiap halaman sehingga setiap halaman
+            dapat dibuka secara langsung.
+        </p>
+
+        <p>
+            Pengaturan tampilan yang sebelumnya menggunakan atribut HTML
+            seperti <b>bgcolor</b>, <b>border</b>, dan <b>align</b>
+            dipindahkan ke CSS.
+        </p>
+    </div>
+
+    <!-- ISI WEBSITE -->
+    <div class="home-div">
+        <h3>Isi Website</h3>
+
+        <table class="tabel-home">
+            <tr>
+                <td><b>Profil Mahasiswa</b></td>
+                <td>Informasi diri, istilah Sistem Informasi, mata kuliah, serta pengalaman dan prestasi.</td>
+            </tr>
+
+            <tr>
+                <td><b>Jadwal Kuliah</b></td>
+                <td>Jadwal kuliah semester 3 kelas PBI beserta rekap total SKS.</td>
+            </tr>
+
+            <tr>
+                <td><b>Galeri Foto</b></td>
+                <td>Kumpulan foto yang digunakan pada website SIPRAK.</td>
+            </tr>
+
+            <tr>
+                <td><b>Daftar Asisten</b></td>
+                <td>Halaman formulir pendaftaran asisten.</td>
+            </tr>
+
+            <tr>
+                <td><b>Journal</b></td>
+                <td>Dokumentasi eksplorasi dan percobaan properti CSS.</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- INLINE STYLE -->
+    <div class="home-div">
+        <h3>Contoh Inline Style</h3>
+
+        <p style="color: #ff0000;">
+            Paragraf ini sengaja menggunakan inline style sebagai salah satu
+            contoh untuk pembahasan pada jurnal.
+        </p>
+
+        <p>
+            Penggunaan inline style tidak menjadi cara utama dalam website ini
+            karena pengaturan tampilan lainnya dilakukan melalui file CSS
+            eksternal.
+        </p>
+    </div>
+
 </body>
 
 </html>

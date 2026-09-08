@@ -1,0 +1,787 @@
+<!--
+  Name           : Ignatius Gavrilla Reda
+  Student number : 2510512020
+  Class          : PBI
+  File           : journal.html
+  MAIN_COLOUR    = #512020
+  ACCENT_COLOUR  = #020215
+  N_EXPLORATION  = 7
+  Date typed     : 08/09/2026
+-->
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SIPRAK2.0 - Journal</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <table class="header-siprak">
+        <tr>
+            <td>
+                <h2>SIPRAK 2.0</h2>
+            </td>
+        </tr>
+    </table>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="profile.html">Profil Mahasiswa</a>
+        <a href="schedule.html">Jadwal Kuliah</a>
+        <a href="gallery.html">Galeri Foto</a>
+        <a href="register.html">Daftar Asisten</a>
+        <a href="journal.html" class="active">Journal</a>
+    </nav>
+
+    <div class="journal-header">
+        <h1>JOURNAL CSS</h1>
+        <p>Eksplorasi CSS pada Tugas Praktikum 3</p>
+    </div>
+
+    <div class="journal-intro">
+        <h2>Catatan Eksplorasi</h2>
+
+        <p>
+            Pada Tugas Praktikum 3, saya melakukan migrasi tampilan website
+            SIPRAK dari atribut HTML ke CSS eksternal.
+            Selain menggunakan property yang sudah digunakan dalam proses
+            migrasi, saya mencoba beberapa property CSS yang belum dibahas
+            secara mendalam pada materi sebelumnya.
+        </p>
+
+        <p>
+            Setiap eksperimen dilakukan pada file yang berbeda sesuai dengan
+            kebutuhan elemen yang ingin diuji. Hasil eksperimen didokumentasikan
+            melalui kode sebelum dan sesudah perubahan serta bukti tampilan
+            pada browser.
+        </p>
+    </div>
+
+    <!-- =====================================================
+         EKSPERIMEN 1
+         ===================================================== -->
+
+    <div class="journal-entry">
+
+        <h2>1. border-radius</h2>
+
+        <p>
+            <b>Lokasi eksperimen:</b>
+            <code>css/style.css</code>, rule
+            <code>.tabel-biodata</code> pada bagian Profile Page.
+        </p>
+
+        <p>
+            <b>Property yang dicoba:</b>
+            <code>border-radius: 10px;</code>
+        </p>
+
+        <p>
+            Border-radius digunakan untuk membuat sudut sebuah elemen menjadi
+            melengkung. Saya mencoba property ini pada tabel biodata di
+            <code>profile.html</code> agar tampilannya tidak terlalu kaku.
+        </p>
+
+        <h3>Code Before</h3>
+
+        <pre>.tabel-biodata {
+    width: 96%;
+    margin: 0 auto 20px;
+    border: 1px solid #512020;
+    border-collapse: collapse;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+
+.tabel-biodata td {
+    padding: 8px;
+    border: 1px solid #512020;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}</pre>
+
+        <h3>Before Image Proof</h3>
+
+        <img class="proof-image" src="Images/eksperimen/border-radius-before.png"
+            alt="Before border-radius pada tabel biodata">
+
+        <h3>Code After</h3>
+
+        <pre>.tabel-biodata {
+    width: 96%;
+    margin: 0 auto 20px;
+    border: 1px solid #512020;
+    border-radius: 10px;
+}
+
+.tabel-biodata td {
+    padding: 8px;
+    border: 1px solid #512020;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}</pre>
+
+        <h3>After Image Proof</h3>
+
+        <img class="proof-image" src="Images/eksperimen/border-radius-after.png"
+            alt="After border-radius pada tabel biodata">
+
+        <p>
+            <b>Hal yang mengejutkan:</b>
+            Nilai radius yang terlalu besar dapat membuat sudut terlihat
+            terlalu bulat sehingga tidak selalu menghasilkan tampilan yang
+            lebih baik.
+        </p>
+
+        <p>
+            <b>Pertanyaan yang belum terjawab:</b>
+            Berapa nilai border-radius yang paling sesuai untuk berbagai
+            ukuran dan jenis elemen?
+        </p>
+
+    </div>
+
+
+    <!-- =====================================================
+         EKSPERIMEN 2
+         ===================================================== -->
+
+    <div class="journal-entry">
+
+        <h2>2. box-shadow</h2>
+
+        <p>
+            <b>Lokasi eksperimen:</b>
+            <code>css/style.css</code>, rule
+            <code>.tabel-biodata</code> pada Profile Page.
+        </p>
+
+        <p>
+            <b>Property yang dicoba:</b>
+            <code>box-shadow: 0 2px 6px #999999;</code>
+        </p>
+
+        <p>
+            Box-shadow digunakan untuk memberikan bayangan pada sebuah elemen.
+            Saya mencobanya pada tabel biodata agar tabel terlihat lebih
+            terpisah dari background halaman.
+        </p>
+
+        <h3>Code Before</h3>
+
+        <pre>.tabel-biodata {
+    width: 96%;
+    margin: 0 auto;
+    border: 1px solid #512020;
+}</pre>
+
+        <h3>Before Image Proof</h3>
+
+        <img class="proof-image" src="Images/eksperimen/box-shadow-before.png"
+            alt="Before box-shadow pada tabel biodata">
+
+        <h3>Code After</h3>
+
+        <pre>.tabel-biodata {
+    width: 96%;
+    margin: 0 auto;
+    border: 1px solid #512020;
+    box-shadow: 0 2px 6px #999999;
+}</pre>
+
+        <h3>After Image Proof</h3>
+
+        <img class="proof-image" src="Images/eksperimen/box-shadow-after.png" alt="After box-shadow pada tabel biodata">
+
+        <p>
+            <b>Hal yang mengejutkan:</b>
+            Shadow yang terlalu besar atau terlalu kuat dapat membuat
+            tampilan menjadi berat.
+        </p>
+
+        <p>
+            <b>Pertanyaan yang belum terjawab:</b>
+            Bagaimana menentukan ukuran shadow yang sesuai berdasarkan ukuran
+            elemen?
+        </p>
+
+    </div>
+
+
+    <!-- =====================================================
+         EKSPERIMEN 3
+         ===================================================== -->
+
+    <div class="journal-entry">
+
+        <h2>3. transition</h2>
+
+        <p>
+            <b>Lokasi eksperimen:</b>
+            <code>css/style.css</code>, rule
+            <code>nav a</code> dan <code>nav a:hover</code>.
+        </p>
+
+        <p>
+            <b>Property yang dicoba:</b>
+            <code>transition: background-color 0.3s;</code>
+        </p>
+
+        <p>
+            Transition digunakan untuk membuat perubahan property CSS
+            berlangsung secara bertahap. Saya menggunakannya pada navigation
+            ketika cursor diarahkan ke link. (karena ini sifat nya animasi atau transisi saya tidak bisa memberikan
+            image proof)
+        </p>
+
+        <h3>Code Before</h3>
+
+        <pre>nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 8px 12px;
+    margin: 0 4px;
+}
+
+nav a:hover {
+    background-color: #7A3030;
+}</pre>
+
+        <h3>Code After</h3>
+
+        <pre>nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 8px 12px;
+    margin: 0 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #7A3030;
+}</pre>
+
+        <p>
+            <b>Hal yang mengejutkan:</b>
+            Transition tidak bekerja sendiri. Harus ada property yang
+            mengalami perubahan, seperti background-color pada hover. Transition juga hanya memberikan delay saat di
+            hover.
+        </p>
+
+        <p>
+            <b>Pertanyaan yang belum terjawab:</b>
+            Apa perbedaan transition dengan animation ketika membuat
+            interaksi yang lebih kompleks?
+        </p>
+
+    </div>
+
+
+    <!-- =====================================================
+         EKSPERIMEN 4
+         ===================================================== -->
+
+    <div class="journal-entry">
+
+        <h2>4. transform</h2>
+
+        <p>
+            <b>Lokasi eksperimen:</b>
+            <code>css/style.css</code>, rule
+            <code>.gallery-photo img:hover</code> pada Gallery Page.
+        </p>
+
+        <p>
+            <b>Property yang dicoba:</b>
+            <code>transform: scale(1.03);</code>
+        </p>
+
+        <p>
+            Transform digunakan untuk mengubah tampilan sebuah elemen.
+            Saya menggunakan nilai scale agar gambar pada gallery sedikit
+            membesar ketika cursor berada di atas gambar.
+        </p>
+
+        <h3>Code Before</h3>
+
+        <pre>.gallery-photo img {
+    width: 720px;
+    height: 1280px;
+    border: 1px solid #512020;
+}</pre>
+
+        <h3>Code After</h3>
+
+        <pre>.gallery-photo img {
+    width: 720px;
+    height: 1280px;
+    border: 1px solid #512020;
+    transition: transform 0.3s;
+}
+
+.gallery-photo img:hover {
+    transform: scale(1.03);
+}</pre>
+
+        <p>
+            <b>Hal yang mengejutkan:</b>
+            Scale dapat membuat gambar terlihat lebih besar tanpa mengubah
+            nilai width dan height dasarnya.
+        </p>
+
+        <p>
+            <b>Pertanyaan yang belum terjawab:</b>
+            Selain scale, transform apa yang paling berguna untuk membuat
+            interaksi sederhana pada website?
+        </p>
+
+    </div>
+
+
+    <!-- =====================================================
+         EKSPERIMEN 5
+         ===================================================== -->
+
+    <div class="journal-entry">
+
+        <h2>5. border-collapse</h2>
+
+        <p>
+            <b>Lokasi eksperimen:</b>
+            <code>css/style.css</code>, rule
+            <code>.tabel-jadwal</code> pada Schedule Page.
+        </p>
+
+        <p>
+            <b>Property yang dicoba:</b>
+            <code>border-collapse: collapse;</code>
+        </p>
+
+        <p>
+            Border-collapse digunakan untuk mengatur bagaimana border pada
+            tabel ditampilkan. Saya menggunakannya pada tabel jadwal agar
+            garis antar-cell dapat menyatu.
+        </p>
+
+        <h3>Code Before</h3>
+
+        <pre>.tabel-jadwal {
+    width: 96%;
+    margin: 20px auto;
+    border: 1px solid #512020;
+}</pre>
+
+        <h3>Before Image Proof</h3>
+
+        <img class="proof-image" src="Images/eksperimen/border-collapse-before.png"
+            alt="Before border-collapse pada tabel jadwal">
+
+        <h3>Code After</h3>
+
+        <pre>.tabel-jadwal {
+    width: 96%;
+    margin: 20px auto;
+    border: 1px solid #512020;
+    border-collapse: collapse;
+}</pre>
+
+        <h3>After Image Proof</h3>
+
+        <img class="proof-image" src="Images/eksperimen/border-collapse-after.png"
+            alt="After border-collapse pada tabel jadwal">
+
+        <p>
+            <b>Hal yang mengejutkan:</b>
+            Satu property dapat memengaruhi tampilan garis pada seluruh
+            tabel.
+        </p>
+
+        <p>
+            <b>Pertanyaan yang belum terjawab:</b>
+            Kapan lebih baik menggunakan border-collapse dibandingkan
+            border-spacing?
+        </p>
+
+    </div>
+
+
+    <!-- =====================================================
+         EKSPERIMEN 6
+         ===================================================== -->
+
+    <div class="journal-entry">
+
+        <h2>6. outline</h2>
+
+        <p>
+            <b>Lokasi eksperimen:</b>
+            <code>css/style.css</code>, rule input
+            <code>:focus</code> pada Register Page.
+        </p>
+
+        <p>
+            <b>Property yang dicoba:</b>
+            <code>outline: 2px solid #7A3030;</code>
+        </p>
+
+        <p>
+            Outline digunakan untuk memberikan garis tambahan di luar border
+            elemen. Saya mencobanya pada input form ketika input sedang
+            mendapatkan focus.
+        </p>
+
+        <h3>Code Before</h3>
+
+        <pre>input[type="email"] {
+    padding: 7px;
+    border: 1px solid #512020;
+}</pre>
+
+        <h3>Before Image Proof</h3>
+
+        <img class="proof-image" src="Images/eksperimen/outline-before.png" alt="Before outline pada input email">
+
+        <h3>Code After</h3>
+
+        <pre>input[type="email"] {
+    padding: 7px;
+    border: 1px solid #512020;
+}
+
+input[type="email"]:focus {
+    outline: 2px solid #7A3030;
+}</pre>
+
+        <h3>After Image Proof</h3>
+
+        <img class="proof-image" src="Images/eksperimen/outline-after.png" alt="After outline pada input email">
+
+        <p>
+            <b>Hal yang mengejutkan:</b>
+            Outline berada di luar border dan dapat digunakan untuk
+            memberikan tanda bahwa sebuah input sedang aktif.
+        </p>
+
+        <p>
+            <b>Pertanyaan yang belum terjawab:</b>
+            Bagaimana menentukan kombinasi border dan outline yang paling
+            baik untuk accessibility?
+        </p>
+
+    </div>
+
+
+    <!-- =====================================================
+         EKSPERIMEN 7
+         ===================================================== -->
+
+    <div class="journal-entry">
+
+        <h2>7. opacity</h2>
+
+        <p>
+            <b>Lokasi eksperimen:</b>
+            <code>css/style.css</code>, eksperimen sementara pada
+            <code>.register-header</code> di Register Page.
+        </p>
+
+        <p>
+            <b>Property yang dicoba:</b>
+            <code>opacity: 0.5;</code>
+        </p>
+
+        <p>
+            Opacity digunakan untuk mengatur tingkat transparansi sebuah
+            elemen. Saya mencoba property ini pada bagian header register
+            untuk melihat pengaruh transparansi terhadap elemen di dalamnya.
+        </p>
+
+        <h3>Code Before</h3>
+
+        <pre>.register-header {
+    width: 96%;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #512020;
+    background-color: #512020;
+}</pre>
+
+        <h3>Before Image Proof</h3>
+
+        <img class="proof-image" src="Images/eksperimen/opacity-before.png" alt="Before opacity pada register header">
+
+        <h3>Code After</h3>
+
+        <pre>.register-header {
+    width: 96%;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #512020;
+    background-color: #512020;
+    opacity: 0.5;
+}</pre>
+
+        <h3>After Image Proof</h3>
+
+        <img class="proof-image" src="Images/eksperimen/opacity-after.png" alt="After opacity pada register header">
+
+        <p>
+            <b>Hal yang mengejutkan:</b>
+            Ketika opacity diberikan pada container, isi di dalamnya seperti
+            teks juga ikut menjadi transparan.
+        </p>
+
+        <p>
+            <b>Pertanyaan yang belum terjawab:</b>
+            Bagaimana membuat hanya background menjadi transparan tanpa
+            membuat teks di dalamnya ikut transparan?
+        </p>
+
+        <p>
+            Setelah eksperimen selesai, property opacity pada
+            <code>.register-header</code> dihapus kembali agar tampilan
+            website tetap sesuai desain utama.
+        </p>
+
+    </div>
+
+
+    <!-- =====================================================
+         FAILED EXPERIMENT 1
+         ===================================================== -->
+
+    <div class="journal-entry failed-entry">
+
+        <h2>Eksperimen Gagal 1: opacity pada container</h2>
+
+        <p>
+            <b>Lokasi eksperimen:</b>
+            <code>css/style.css</code>, rule
+            <code>.register-header</code>.
+        </p>
+
+        <p>
+            Eksperimen ini dilakukan untuk melihat apakah opacity hanya
+            memengaruhi background container. Hasilnya tidak sesuai dengan
+            dugaan awal karena seluruh isi container ikut menjadi transparan.
+        </p>
+
+        <h3>Code Before</h3>
+
+        <pre>.register-header {
+    background-color: #512020;
+}</pre>
+
+        <h3>Before Image Proof</h3>
+
+        <img class="proof-image" src="Images/eksperimen/opacity-before.png" alt="Before failed opacity experiment">
+
+        <h3>Code After</h3>
+
+        <pre>.register-header {
+    background-color: #512020;
+    opacity: 0.5;
+}</pre>
+
+        <h3>After Image Proof</h3>
+
+        <img class="proof-image" src="Images/eksperimen/opacity-failed.png" alt="Failed opacity experiment">
+
+        <p>
+            <b>Hasil eksperimen:</b>
+            Eksperimen dianggap tidak sesuai karena teks di dalam container
+            juga menjadi transparan. Setelah itu rule opacity dihapus dari
+            desain akhir.
+        </p>
+
+    </div>
+
+
+    <!-- =====================================================
+         FAILED EXPERIMENT 2
+         ===================================================== -->
+
+    <div class="journal-entry failed-entry">
+
+        <h2>Eksperimen Gagal 2: text-indent: 100px</h2>
+
+        <p>
+            <b>Lokasi eksperimen:</b>
+            <code>css/style.css</code>, eksperimen sementara pada
+            <code>.journal-entry p</code>.
+        </p>
+
+        <p>
+            Saya mencoba menggunakan text-indent agar text baris awal nya menjorok ke dalam, eh malah hasil nya jadi
+            kurang rapih karena dua baris sekaligus ikut menjorok ke dalam
+        </p>
+
+        <h3>Code Before</h3>
+
+        <pre>.journal-entry p {
+    line-height: 1.6;
+}</pre>
+
+        <h3>Before Image Proof</h3>
+
+        <img class="proof-image" src="Images/eksperimen/text-indent-before.png"
+            alt="Before failed text-indent experiment">
+
+        <h3>Code After</h3>
+
+        <pre>.journal-entry p {
+    line-height: 1.6;
+    text-indent: 100px;
+}</pre>
+
+        <h3>After Image Proof</h3>
+
+        <img class="proof-image" src="Images/eksperimen/text-indent-failed.png" alt="Failed text-indent experiment">
+
+        <p>
+            <b>Hasil eksperimen:</b>
+            text-indent: 100px berhasil diterapkan, tetapi tidak sesuai dengan kebutuhan desain karena membuat awal
+            setiap paragraf terlalu menjorok ke dalam. Tampilan menjadi kurang rapi sehingga property tersebut dihapus
+            dari CSS final.
+        </p>
+
+    </div>
+
+
+    <!-- =====================================================
+         DIRECTED CHALLENGES
+         ===================================================== -->
+
+    <div class="journal-entry">
+
+        <h2>Implementasi Directed Challenges</h2>
+
+        <table class="tabel-challenge">
+
+            <tr>
+                <td><b>No.</b></td>
+                <td><b>Challenge</b></td>
+                <td><b>Implementasi</b></td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Alternating table row colors</td>
+                <td>
+                    Menggunakan pseudo-class
+                    <code>:nth-child(even)</code> pada tabel challange.
+                </td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Navigation hover smooth</td>
+                <td>
+                    Menggunakan
+                    <code>transition: background-color 0.3s;</code>
+                    pada navigation.
+                </td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Biodata rounded corners + shadow</td>
+                <td>
+                    Menggunakan <code>border-radius</code> dan
+                    <code>box-shadow</code> pada tabel biodata.
+                </td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>Table lines merge</td>
+                <td>
+                    Menggunakan
+                    <code>border-collapse: collapse;</code>
+                    pada tabel jadwal.
+                </td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>Gallery image grows on hover</td>
+                <td>
+                    Menggunakan
+                    <code>transform: scale(1.03);</code>
+                    pada gambar gallery.
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
+
+
+    <!-- =====================================================
+         REFLECTION
+         ===================================================== -->
+
+    <div class="journal-entry">
+
+        <h2>Reflection</h2>
+
+        <h3>1. Perbandingan Tugas 2 dan Tugas 3</h3>
+
+        <p>
+            Pengurangan baris kode, pengurangan tersebut terjadi karena beberapa pengaturan tampilan
+            yang sebelumnya ditulis langsung pada HTML dipindahkan ke
+            external CSS. Beberapa struktur HTML yang tidak diperlukan juga
+            dirapikan.
+        </p>
+
+        <h3>2. Hal yang menjadi lebih mudah dengan CSS</h3>
+
+        <p>
+            Hal yang menjadi lebih mudah adalah mengatur tampilan beberapa
+            halaman secara konsisten. Warna, padding, border, margin dan
+            navigation dapat diatur melalui satu file CSS sehingga tidak
+            perlu menuliskan pengaturan tampilan yang sama berulang kali.
+        </p>
+
+        <h3>3. Hal yang masih membingungkan</h3>
+
+        <p>
+            Bagian yang masih membingungkan adalah penggunaan selector ketika
+            sebuah elemen berada di dalam elemen lain, terutama pada tabel
+            yang memiliki struktur yang lebih kompleks. Contohnya penggunaan nth-child, itu saja sudah membingungkan
+            antara even odd, first child, ada juga yang dalam kurung (1)(2) dll.
+        </p>
+
+        <h3>4. Mengapa inline style tidak dianjurkan?</h3>
+
+        <p>
+            Inline style tidak dianjurkan karena aturan tampilan ditulis
+            langsung pada elemen HTML. Jika jumlah elemen semakin banyak,
+            pengelolaannya menjadi lebih sulit. External CSS lebih mudah
+            digunakan karena aturan tampilan dapat dikelola dari satu file.
+        </p>
+
+        <p>
+            Pada website SIPRAK2.0 ini terdapat satu contoh inline style yang sengaja
+            digunakan untuk memenuhi kebutuhan pembahasan jurnal.
+        </p>
+
+        <h3>5. CSS Rule yang Tidak Bekerja</h3>
+
+        <p>
+            Salah satu masalah yang ditemukan adalah ketika selector CSS tidak
+            sesuai dengan struktur HTML. Akibatnya, perubahan CSS tidak
+            terlihat pada halaman. Diagnosis dilakukan dengan memeriksa
+            kembali nama class dan hubungan antara elemen HTML dengan
+            selector yang digunakan.
+        </p>
+
+    </div>
+
+</body>
+
+</html>

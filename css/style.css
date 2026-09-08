@@ -1,4 +1,24 @@
-/*navigasi*/
+/* ==================================================
+   IDENTITAS MAHASISWA
+   Nama   : Ignatius Gavrilla Reda
+   NIM    : 2510512020
+   Kelas  : PBI
+   ================================================== */
+
+/*--- HEADER WEBSITE ---*/
+.header-siprak {
+    width: 100%;
+    background-color: #512020;
+}
+
+.header-siprak h2 {
+    color: #FFFFFF;
+    padding: 0px;
+    text-align: center;
+}
+
+/*--- NAVIGASI ---*/
+
 nav {
     background-color: #512020;
     padding: 10px;
@@ -13,16 +33,16 @@ nav a {
     transition: background-color 0.3s;
 }
 
+nav a:hover {
+    background-color: #7A3030;
+}
+
 nav a:link {
     color: #FFFFFF;
 }
 
 nav a:visited {
     color: #FFFFFF;
-}
-
-nav a:hover {
-    background-color: #7A3030;
 }
 
 nav a:active {
@@ -33,49 +53,91 @@ nav a.active {
     background-color: #020215;
 }
 
-.profil-header {
+/*--- HOME ---*/
+
+.home-div {
+    width: 80%;
+    margin: 20px auto;
+    padding: 18px;
+    border: 1px solid #512020;
+    background-color: #FFFFFF;
+}
+
+.home-div h2 {
+    color: #512020;
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #512020;
+}
+
+.home-div h3 {
+    color: #512020;
+    margin-top: 0;
+}
+
+.tabel-home {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.tabel-home td {
+    padding: 8px;
+    border: 1px solid #020215;
+}
+
+.tabel-home tr:nth-child(odd) {
+    background-color: #020215;
+    color: #FFFFFF;
+}
+
+#selamat-datang {
+    color: #512020;
+}
+
+/* --- PROFIL MAHASISWA ---*/
+
+/* HEADER TABEL */
+.judul-tabel {
+    width: 96%;
+    margin: 20px auto 0;
+    border: 1px solid #512020;
+    border-collapse: collapse;
+}
+
+.judul-tabel td {
+    padding: 10px;
+    border: 1px solid #512020;
     background-color: #512020;
     color: #FFFFFF;
     text-align: center;
-    padding: 10px;
-    width: 100%;
+    font-weight: bold;
 }
 
-/*tabel biodata*/
+
+/* DATA DIRI */
 .tabel-biodata {
     width: 96%;
-    margin: 0 auto;
+    margin: 0 auto 20px;
     border: 1px solid #512020;
+    border-collapse: collapse;
+    background-color: #FFFFFF;
 }
 
 .tabel-biodata td {
     padding: 8px;
     border: 1px solid #512020;
-}
+    background-color: #FFFFFF;
 
-.tabel-biodata tr:nth-child(even) {
-    background-color: #F5E0E0;
-}
-
-.biodata-header {
-    background-color: #512020;
-    color: #FFFFFF;
-    text-align: center;
-}
-
-.tabel-biodata .biodata-header td:first-child {
-    padding: 8px;
-    color: #FFFFFF;
 }
 
 .tabel-biodata td:first-child {
-    color: #512020;
     width: 30%;
+    color: #512020;
 }
 
 .foto-biodata {
-    width: 28%;
-    background-color: #F5E0E0;
+    width: 20%;
     text-align: center;
     vertical-align: middle;
 }
@@ -83,24 +145,14 @@ nav a.active {
 .foto-biodata img {
     width: 155px;
     height: 195px;
-    border: 1px solid #512020;
     margin: 4px;
 }
 
-.foto-biodata i {
-    color: #512020;
-    font-size: 10px;
-}
+/* TABEL IS TERM STUDIED*/
 
-.tabel-biodata td:nth-child(2) {
-    width: 42%;
-}
-
-/*tabel istilah dan matkul*/
 .tabel-istilah {
     width: 96%;
     margin: 0 auto;
-    border: 1px solid #512020;
 }
 
 .tabel-istilah td {
@@ -113,10 +165,13 @@ nav a.active {
     color: #FFFFFF;
 }
 
+
+/* TABEL MATA KULIAH SEMESTER 3*/
+
 .tabel-matkul {
     width: 96%;
     margin: 0 auto;
-    border: 1px solid #512020;
+    border: 1px #512020;
 }
 
 .tabel-matkul td {
@@ -129,32 +184,32 @@ nav a.active {
     color: #FFFFFF;
 }
 
-/*tabel prestasi*/
+
+/* TABEL PENGALAMAN & PRESTASI*/
+
 .tabel-prestasi {
     width: 96%;
     margin: 0 auto;
-    border: 1px solid #512020;
 }
 
 .tabel-prestasi td {
-    padding: 8px;
+    padding: 12px;
     border: 1px solid #512020;
+    border-radius: 10px;
 }
 
 .prestasi-header {
     background-color: #512020;
     color: #FFFFFF;
     text-align: center;
+    border-radius: 10px;
 }
 
 .prestasi-subheader {
     background-color: #7A3030;
     color: #FFFFFF;
     text-align: center;
-}
-
-.tabel-prestasi tr:nth-child(2n+3) {
-    background-color: #FFE8E8;
+    border-radius: 10px;
 }
 
 .prestasi-total {
@@ -167,4 +222,555 @@ nav a.active {
 .tabel-prestasi td:nth-child(3),
 .tabel-prestasi td:nth-child(4) {
     text-align: center;
+}
+
+
+/* --- JADWAL KULIAH ---*/
+
+.tabel-jadwal {
+    width: 96%;
+    margin: 20px auto;
+    border: 1px solid #512020;
+    border-collapse: collapse;
+}
+
+.tabel-jadwal td {
+    padding: 8px;
+    border: 1px solid #512020;
+}
+
+.jadwal-header {
+    background-color: #512020;
+    color: #FFFFFF;
+    text-align: center;
+    width: 100%;
+}
+
+.jadwal-header td {
+    padding: 10px;
+}
+
+
+/* NAMA HARI */
+.tabel-jadwal tr:nth-child(2) {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+
+/* TABEL KECIL DI DALAM JADWAL */
+.tabel-jadwal td table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabel-jadwal td table td {
+    border: none;
+    padding: 4px 8px;
+    background-color: #0000;
+}
+
+
+/* NAMA MATA KULIAH */
+.tabel-jadwal td table tr:first-child td {
+    font-size: 15px;
+}
+
+
+/* DOSEN */
+
+.tabel-jadwal td table tr:nth-child(2) td {
+    font-size: 14px;
+    color: #512020
+}
+
+
+/* RUANGAN */
+.tabel-jadwal td table tr:nth-child(3) td {
+    font-size: 13px;
+    background-color: #020215;
+    color: #FFFFFF
+}
+
+
+/* BARIS ISTIRAHAT */
+
+.tabel-jadwal tr td[colspan="6"] {
+    padding: 9px;
+    background-color: #020215;
+    color: #FFFFFF
+}
+
+
+/* --- REKAP TOTAL SKS */
+.tabel-sks {
+    width: 96%;
+    margin: 20px auto;
+    border: 1px solid #512020;
+    border-collapse: collapse;
+}
+
+.tabel-sks td {
+    border: 1px;
+    border: 1px solid #512020;
+    padding: 12px;
+}
+
+.sks-header {
+    background-color: #512020;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.tabel-sks tr:nth-child(1) {
+    word-spacing: 3px;
+}
+
+.tabel-sks tr:nth-child(2) {
+    background-color: #F5E0E0;
+    color: #000000
+}
+
+.sks-total {
+    background-color: #020215;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+/* --- GALLERY --- */
+
+/* JUDUL GALERI */
+.gallery-title {
+    width: 96%;
+    margin: 20px auto 0;
+    padding: 15px;
+    border: 1px solid #512020;
+    background-color: #512020;
+    text-align: center;
+}
+
+.gallery-title h1 {
+    margin: 0;
+    color: #FFFFFF;
+    font-size: 24px;
+}
+
+.gallery-title p {
+    margin: 5px 0 0;
+    color: #FFD0D0;
+}
+
+
+/* FOTO GALERI */
+.gallery-photo {
+    width: 96%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.gallery-photo h2 {
+    color: #512020;
+    font-size: 20px;
+}
+
+.gallery-photo img {
+    width: 720px;
+    height: 1280px;
+    border: 1px solid #512020;
+    transition: transform 0.3s;
+}
+
+.gallery-photo img:hover {
+    transform: scale(1.03);
+}
+
+
+/* TABEL IMAGE MAP */
+.tabel-image-map {
+    width: 96%;
+    margin: 20px auto;
+    border: 1px solid #512020;
+    border-collapse: collapse;
+}
+
+.tabel-image-map td {
+    padding: 8px;
+    border: 1px solid #512020;
+
+}
+
+.tabel-image-map tr:nth-child(1) {
+    padding: 8px;
+    border: 1px solid #512020;
+    background-color: #512020;
+    color: #FFFFFF;
+}
+
+.tabel-image-map tr:nth-child(2) {
+    padding: 8px;
+    border: 1px solid #512020;
+    background-color: #F5E0E0;
+    color: auto;
+}
+
+.tabel-image-map tr:nth-child(4) {
+    padding: 8px;
+    border: 1px solid #512020;
+    background-color: #F5E0E0;
+    color: auto;
+}
+
+
+.image-map-header {
+    background-color: #512020;
+    text-align: center;
+    font-weight: bold;
+}
+
+.image-map-subheader {
+    color: #000000;
+    text-align: center;
+    font-weight: bold;
+}
+
+.nomor {
+    width: 8%;
+    text-align: center;
+}
+
+.bentuk-area {
+    width: 18%;
+    text-align: center;
+}
+
+.bentuk-area span {
+    color: #666666;
+    font-size: 11px;
+}
+
+
+/* BUKTI KOORDINAT */
+.coordinate-proof {
+    width: 96%;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #AAAAAA;
+    background-color: #EEEEEE;
+    text-align: center;
+}
+
+.coordinate-proof a {
+    color: #512020;
+}
+
+/* --- PROOF KOORDINAT ---*/
+
+.tabel-proof {
+    width: 100%;
+    margin: 20px auto;
+    border: 1px solid #512020;
+    border-collapse: collapse;
+}
+
+.tabel-proof th {
+    padding: 10px;
+    border: 1px solid #512020;
+    background-color: #512020;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.tabel-proof td {
+    padding: 10px;
+    border: 1px solid #512020;
+    background-color: #FFFFFF;
+}
+
+.proof-nomor {
+    width: 8%;
+    text-align: center;
+}
+
+.proof-area {
+    width: 30%;
+    text-align: center;
+}
+
+.proof-area i {
+    color: #555555;
+    font-size: 13px;
+}
+
+.proof-gambar {
+    text-align: center;
+}
+
+.proof-gambar img {
+    width: 400px;
+    max-width: 100%;
+}
+
+/* --- HALAMAN REGISTER  ---*/
+.register-header {
+    width: 96%;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #512020;
+    background-color: #512020;
+    text-align: center;
+}
+
+
+.register-header h1 {
+    margin: 0;
+    color: #FFFFFF;
+    font-size: 24px;
+}
+
+.register-header p {
+    margin: 5px 0 0;
+    color: #FFD0D0;
+    font-size: 13px;
+}
+
+.tabel-form {
+    width: 90%;
+    margin: 20px auto;
+    border-spacing: 8px;
+}
+
+.form-table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+.form-table td {
+    padding: 7px;
+}
+
+.label-form {
+    width: 38%;
+    text-align: right;
+    color: #512020;
+}
+
+.label-top {
+    vertical-align: top;
+}
+
+fieldset {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #512020;
+}
+
+legend {
+    padding: 5px 10px;
+    color: #512020;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+    padding: 7px;
+    border: 1px solid #512020;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.input-nama {
+    width: 260px;
+}
+
+.input-password {
+    width: 190px;
+}
+
+.input-email {
+    width: 260px;
+}
+
+.input-telp {
+    width: 160px;
+}
+
+.input-ipk {
+    width: 90px;
+}
+
+select {
+    min-width: 260px;
+}
+
+.select-hari {
+    width: 150px;
+}
+
+textarea {
+    width: 360px;
+    resize: vertical;
+}
+
+.form-table input[type="radio"],
+.form-table input[type="checkbox"] {
+    margin-right: 4px;
+}
+
+.form-table label {
+    color: #333333;
+}
+
+.pernyataan {
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid #512020;
+}
+
+.form-button {
+    padding: 15px;
+    text-align: center;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 9px 15px;
+    margin: 5px;
+    border: 1px solid #512020;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="submit"] {
+    background-color: #512020;
+    color: #FFFFFF;
+}
+
+input[type="reset"] {
+    background-color: #020215;
+    color: #FFFFFF;
+}
+
+input[type="submit"]:hover {
+    background-color: #7A3030;
+}
+
+input[type="reset"]:hover {
+    background-color: #333333;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #7A3030;
+}
+
+/* HALAMAN JOURNAL ---*/
+.journal-header {
+    width: 96%;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #512020;
+    background-color: #512020;
+    text-align: center;
+}
+
+.journal-header h1 {
+    margin: 0;
+    color: #FFFFFF;
+    font-size: 24px;
+}
+
+.journal-header p {
+    margin: 5px 0 0;
+    color: #FFD0D0;
+}
+
+.journal-intro,
+.journal-entry {
+    width: 90%;
+    margin: 20px auto;
+    padding: 18px;
+    border: 1px solid #512020;
+    background-color: #FFFFFF;
+}
+
+.journal-intro h2,
+.journal-entry h2 {
+    margin-top: 0;
+    color: #512020;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #512020;
+}
+
+.journal-entry h3 {
+    color: #512020;
+}
+
+.journal-entry p {
+    line-height: 1.6;
+}
+
+.journal-entry code {
+    color: #512020;
+    font-weight: bold;
+}
+
+.experiment-code {
+    margin: 15px 0;
+    padding: 10px;
+    border: 1px solid #CCCCCC;
+    background-color: #F5E0E0;
+}
+
+.journal-entry pre {
+    margin: 15px 0;
+    padding: 12px;
+    border: 1px solid #CCCCCC;
+    background-color: #F5E0E0;
+    white-space: pre-wrap;
+    overflow: auto;
+}
+
+.proof-image {
+    display: block;
+    width: 90%;
+    max-width: 800px;
+    margin: 10px auto 20px;
+    border: 1px solid #512020;
+}
+
+.failed-entry {
+    border-left: 5px solid #020215;
+}
+
+.tabel-challenge {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+}
+
+.tabel-challenge td {
+    padding: 8px;
+    border: 1px solid #512020;
+}
+
+.tabel-challenge tr:first-child {
+    background-color: #512020;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.tabel-challenge tr:nth-child(even) {
+    background-color: #F5E0E0;
 }

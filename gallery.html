@@ -1,139 +1,167 @@
 <!--
-  Name           : Ignatius Gavrilla Reda
-  Student number : 2510512020
-  Class          : PBI
-  File           : gallery.html
-  MAIN_COLOUR    = #512020
-  BORDER_WIDTH   = 1
-  N_ACHIEVEMENT  = 5
-  Date typed     : 29/08/2026
+Name           : Ignatius Gavrilla Reda
+Student number : 2510512020
+Class          : PBI
+File           : gallery.html
+MAIN_COLOUR    = #512020
+BORDER_WIDTH   = 1
+N_ACHIEVEMENT  = 5
+Date typed     : 29/08/2026
 -->
+
 <!DOCTYPE html>
 <html lang="id">
 
 <head>
-    <title>Galeri Foto &mdash; SIPRAK</title>
+    <title>SIPRAK2.0 - Galeri</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body bgcolor="#FFF8F8" text="#333333">
+<body>
 
-    <table width="100%" border="0" cellpadding="10" cellspacing="0">
-        <tr bgcolor="#512020">
-            <td align="center">
-                <font color="#FFFFFF" size="5"><b>GALERI FOTO</b></font><br>
-                <font color="#FFD0D0" size="2">Dokumentasi Kegiatan Laboratorium</font>
-            </td>
-        </tr>
-    </table>
-
-    <br>
-
-    <table width="98%" border="0" cellpadding="10" cellspacing="0" align="center">
+    <!-- HEADER SIPRAK -->
+    <table class="header-siprak">
         <tr>
-            <td align="center">
-                <font size="10" color="#512020">
-                    <b>Kegiatan Praktikum </b>
-                </font>
-                <br><br>
-
-                <img src="images/foto lab praktikum web programming(2).jpeg" width="720" height="1280" border="1"
-                    alt="Foto Kegiatan Praktikum Laboratorium Pemrograman Web" usemap="#peta_lab" hspace="0" vspace="5">
-
-                <map name="peta_lab">
-
-                    <area shape="rect" coords="300,642,360,742" alt="Monitor" title="Layar Monitor" href="#ket-rect">
-
-                    <area shape="circle" coords="207,572,237" alt="Mr.Panji" title="Mr.Panji - Dosen Pengampu"
-                        href="#ket-circle">
-
-                    <area shape="poly" coords="276,920,281,1104,359,1085,438,1140,444,1102" alt="Kursi Kabel"
-                        title="Kursi dan kabel yang digunakan saat praktikum berlangsung" href="#ket-poly">
-
-                </map>
+            <td>
+                <h2>SIPRAK 2.0</h2>
             </td>
         </tr>
     </table>
 
-    <br>
+    <!-- NAVIGASI -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="profile.html">Profil Mahasiswa</a>
+        <a href="schedule.html">Jadwal Kuliah</a>
+        <a href="gallery.html" class="active">Galeri Foto</a>
+        <a href="register.html">Daftar Asisten</a>
+        <a href="journal.html">Journal</a>
+    </nav>
 
-    <table width="96%" border="1" bordercolor="#512020" cellpadding="8" cellspacing="0" align="center">
-        <tr bgcolor="#512020">
-            <td colspan="4" align="center">
-                <font color="#FFFFFF" size="3"><b>KETERANGAN AREA IMAGE MAP</b></font>
+
+
+    <!-- JUDUL GALERI -->
+    <div class="gallery-title">
+        <h1>GALERI FOTO</h1>
+        <p>Dokumentasi Kegiatan Laboratorium</p>
+    </div>
+
+
+    <!-- FOTO KEGIATAN -->
+    <div class="gallery-photo">
+        <h2>Kegiatan Praktikum</h2>
+
+        <img src="images/foto lab praktikum web programming(2).jpeg"
+            alt="Foto Kegiatan Praktikum Laboratorium Pemrograman Web" usemap="#peta_lab">
+
+        <map name="peta_lab">
+
+            <area shape="rect" coords="300,642,360,742" alt="Monitor" title="Layar Monitor" href="#ket-rect">
+
+            <area shape="circle" coords="207,572,237" alt="Mr.Panji" title="Mr.Panji - Dosen Pengampu"
+                href="#ket-circle">
+
+            <area shape="poly" coords="276,920,281,1104,359,1085,438,1140,444,1102" alt="Kursi Kabel"
+                title="Kursi dan kabel yang digunakan saat praktikum berlangsung" href="#ket-poly">
+
+        </map>
+    </div>
+
+
+    <!-- KETERANGAN IMAGE MAP -->
+    <table class="tabel-image-map">
+
+        <tr class="image-map-header">
+            <td colspan="4">
+                KETERANGAN AREA IMAGE MAP
             </td>
         </tr>
-        <tr bgcolor="#7A3030">
-            <td align="center" width="8%">
-                <font color="#FFFFFF"><b>No.</b></font>
-            </td>
-            <td width="28%">
-                <font color="#FFFFFF"><b>Objek dalam Foto</b></font>
-            </td>
-            <td align="center" width="18%">
-                <font color="#FFFFFF"><b>Bentuk Area</b></font>
-            </td>
-            <td>
-                <font color="#FFFFFF"><b>Alasan Pemilihan Koordinat</b></font>
-            </td>
+
+        <tr class="image-map-subheader">
+            <td>No.</td>
+            <td>Objek dalam Foto</td>
+            <td>Bentuk Area</td>
+            <td>Alasan Pemilihan Koordinat</td>
         </tr>
 
-        <tr bgcolor="#FFE8E8">
-            <td align="center">
-                <a name="ket-rect"></a>1
-            </td>
+        <tr id="ket-rect">
+            <td class="nomor">1</td>
+
             <td>Layar Monitor</td>
-            <td align="center"><b>Rectangle</b><br>
-                <font size="1" color="#666">(300,642,360,742)</font>
+
+            <td class="bentuk-area">
+                <b>Rectangle</b>
+                <br>
+                <span>(300,642,360,742)</span>
             </td>
-            <td>Layar monitor berbentuk persegi panjang
-                sehingga <b>shape="rect"</b> paling sesuai. Koordinat diukur
-                dari pojok kiri atas (x1,y1) ke pojok kanan bawah (x2,y2)
-                objek menggunakan tool seleksi.</td>
+
+            <td>
+                Layar monitor berbentuk persegi panjang
+                sehingga <b>shape="rect"</b> paling sesuai.
+                Koordinat diukur dari pojok kiri atas
+                (x1,y1) ke pojok kanan bawah (x2,y2)
+                objek menggunakan tool seleksi.
+            </td>
         </tr>
 
-        <tr bgcolor="#FFFFFF">
-            <td align="center">
-                <a name="ket-circle"></a>2
-            </td>
+        <tr id="ket-circle">
+            <td class="nomor">2</td>
+
             <td>Mr.Panji</td>
-            <td align="center"><b>Circle</b><br>
-                <font size="1" color="#666">(207,572,237)</font>
+
+            <td class="bentuk-area">
+                <b>Circle</b>
+                <br>
+                <span>(207,572,237)</span>
             </td>
-            <td>Bentuk kepala Mr.Panji mendekati lingkaran, sehingga
-                <b>shape="circle"</b> paling cocok. Koordinat: (cx,cy,r)
-                di mana cx,cy adalah titik tengah kepala dan r adalah jari-jari
+
+            <td>
+                Bentuk kepala Mr.Panji mendekati lingkaran,
+                sehingga <b>shape="circle"</b> paling cocok.
+                Koordinat: (cx,cy,r) di mana cx,cy adalah
+                titik tengah kepala dan r adalah jari-jari
                 area yang mencakup keseluruhan objek.
             </td>
         </tr>
 
-        <tr bgcolor="#FFE8E8">
-            <td align="center">
-                <a name="ket-poly"></a>3
+        <tr id="ket-poly">
+            <td class="nomor">3</td>
+
+            <td>Garis Merah (Kursi &amp; Area Kabel)</td>
+
+            <td class="bentuk-area">
+                <b>Polygon</b>
+                <br>
+                <span>
+                    (276,920,281,1104,<br>
+                    359,1085,438,1140,<br>
+                    444,1102)
+                </span>
             </td>
-            <td>Garis Merah (Kursi & Area Kabel)</td>
-            <td align="center"><b>Polygon</b><br>
-                <font size="1" color="#666">(276,920,281,1104,<br>359,1085,438,1140,<br>444,1102)</font>
+
+            <td>
+                Area yang ditandai garis merah memiliki bentuk
+                tidak beraturan. Oleh karena itu
+                <b>shape="poly"</b> dengan 5 pasang koordinat
+                dipilih untuk mengikuti pola konturnya secara
+                akurat. Titik-titik diukur mengitari tepi objek
+                secara berurutan.
             </td>
-            <td>Area yang ditandai garis merah memiliki bentuk tidak
-                beraturan. Oleh karena itu <b>shape="poly"</b> dengan 5 pasang koordinat
-                dipilih untuk mengikuti pola konturnya secara akurat.
-                Titik-titik diukur mengitari tepi objek secara berurutan.</td>
         </tr>
 
     </table>
 
-    <br>
 
-    <table width="96%" border="1" bordercolor="#AAAAAA" cellpadding="7" cellspacing="0" align="center">
-        <tr bgcolor="#EEEEEE">
-            <td align="center">
-                <font size="2" color="#555555">
-                    Bukti pengukuran koordinat tersimpan di
-                    <b><a href="Images/coordinates_proof/proof.html" target="_blank">Images/coordinates_proof/</a></b>
-                </font>
-            </td>
-        </tr>
-    </table <br>
+    <!-- BUKTI KOORDINAT -->
+    <div class="coordinate-proof">
+        Bukti pengukuran koordinat tersimpan di
+        <b>
+            <a href="css/proof.html" target="_blank">
+                css/proof.html/
+            </a>
+        </b>
+    </div>
 
 </body>
 
